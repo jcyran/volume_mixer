@@ -1,0 +1,12 @@
+serial_port:  COM3
+baud_rate:  9600
+
+pot_map:
+  0:  master
+  1:  Discord.exe
+  2:  spotify.exe
+  3:  firefox.exe
+  4:
+    - League of Legends.exe
+    - RainbowSix.exe
+    - Hades.exe
