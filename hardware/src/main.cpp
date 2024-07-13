@@ -19,7 +19,7 @@ void readValues() {
     potValues[i] = 100 - (int) ((analogRead(pot[i]) * 100) / 4095);
     */
 
-  potValues[0] = 100 - (int) ((analogRead(potPin) * 100) / 4095);
+  potValues[0] = 100 - (int) (((analogRead(potPin) * 100) / 4095) / 2) * 2;
 }
 
 void sendValues() {
