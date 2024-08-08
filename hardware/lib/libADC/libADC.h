@@ -11,5 +11,8 @@
 #define A6 6
 #define A7 7
 
-void ADCInit(void);
-uint16_t ADCConversion(int analogIO);
+class ADCHandler {
+public:
+  void init(void);
+  uint16_t convert(int analogIO);
+};
