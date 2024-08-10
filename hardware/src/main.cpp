@@ -16,8 +16,9 @@ void sendValues(void);
 int main() {
   adc.init();
   usart.init(9600);
+  sei();
 
-  while(true) {
+  while (true) {
     readValues();
     sendValues();
     

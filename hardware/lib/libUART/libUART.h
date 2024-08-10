@@ -8,5 +8,4 @@ class USARTHandler {
 public:
   void init(uint32_t baudrate, bool highspeed = false);
   void sendByte(uint8_t data);
-  // void sendString(uint8_t* data);
 };

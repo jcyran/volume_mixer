@@ -11,7 +11,7 @@ uint16_t ADCHandler::convert(int analogIO) {
   ADCSRA |= (1 << ADSC);
   
   while (ADCSRA & (1 << ADSC));
-  ADMUX = (ADMUX>>4)<<4; //reset the 4 least significant bits (channel selection bits)
+  ADMUX = (ADMUX >> 4) << 4; //reset the 4 least significant bits (channel selection bits)
 
   return ADC;
 }
