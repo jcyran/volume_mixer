@@ -1,6 +1,6 @@
 #include "libUART.h"
 
-static bool txComplete;
+volatile static bool txComplete = true;
 
 ISR(USART_TX_vect) {
   txComplete = true;

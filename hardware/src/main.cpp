@@ -6,8 +6,7 @@
 ADCHandler adc;
 USARTHandler usart;
 uint8_t pot[5] = { A0, A1, A2, A3, A4 };
-uint8_t potValues[5];
-
+uint16_t potValues[5];
 
 void readValues(void);
 void sendValues(void);
@@ -22,7 +21,7 @@ int main() {
     readValues();
     sendValues();
     
-    _delay_ms(500);
+    _delay_ms(10);
   }
 
   return 0;
@@ -31,7 +30,7 @@ int main() {
 
 void readValues(void) {
   for (int i = 0; i < 5; i++)
-    potValues[i] = 100 - (int) ((adc.convert(pot[i]) * 100) / 4095);
+    potValues[i] = adc.convert(pot[i]) / 7;
 }
 
 void sendValues(void) {
