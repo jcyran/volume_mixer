@@ -1,7 +1,0 @@
-set which apps to mix
-volume slides (pot changes will be relative to these values)
-mute
-
-restart to submit the changes
-
-palette: https://colorhunt.co/palette/405d72758694f7e7dcfff8f3
